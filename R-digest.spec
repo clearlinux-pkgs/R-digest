@@ -4,7 +4,7 @@
 #
 Name     : R-digest
 Version  : 0.6.8
-Release  : 12
+Release  : 13
 URL      : http://cran.r-project.org/src/contrib/digest_0.6.8.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/digest_0.6.8.tar.gz
 Summary  : No detailed summary available
