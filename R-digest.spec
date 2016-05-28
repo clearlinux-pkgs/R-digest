@@ -4,7 +4,7 @@
 #
 Name     : R-digest
 Version  : 0.6.9
-Release  : 23
+Release  : 24
 URL      : http://cran.r-project.org/src/contrib/digest_0.6.9.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/digest_0.6.9.tar.gz
 Summary  : Create Compact Hash Digests of R Objects
@@ -34,8 +34,10 @@ lib components for the R-digest package.
 %install
 rm -rf %{buildroot}
 export LANG=C
-export CFLAGS="$CFLAGS -O3 -flto -ffunction-sections -fno-semantic-interposition "
-export CXXFLAGS="$CXXFLAGS -O3 -flto -ffunction-sections -fno-semantic-interposition "
+export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export LDFLAGS="$LDFLAGS  -Wl,-z -Wl,relro"
