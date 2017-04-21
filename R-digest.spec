@@ -4,17 +4,15 @@
 #
 Name     : R-digest
 Version  : 0.6.12
-Release  : 33
+Release  : 34
 URL      : http://cran.r-project.org/src/contrib/digest_0.6.12.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/digest_0.6.12.tar.gz
 Summary  : Create Compact Hash Digests of R Objects
 Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-digest-lib
-Requires: R-stringi
 BuildRequires : R-knitr
 BuildRequires : R-markdown
-BuildRequires : R-stringi
 BuildRequires : clr-R-helpers
 
 %description
@@ -32,12 +30,15 @@ lib components for the R-digest package.
 %setup -q -c -n digest
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1487767702
+export SOURCE_DATE_EPOCH=1492796309
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1487767702
+export SOURCE_DATE_EPOCH=1492796309
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -53,7 +54,7 @@ R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
 R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library digest
 
@@ -64,6 +65,7 @@ R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/lib
 /usr/lib64/R/library/digest/GPL-2
 /usr/lib64/R/library/digest/INDEX
 /usr/lib64/R/library/digest/Meta/Rd.rds
+/usr/lib64/R/library/digest/Meta/features.rds
 /usr/lib64/R/library/digest/Meta/hsearch.rds
 /usr/lib64/R/library/digest/Meta/links.rds
 /usr/lib64/R/library/digest/Meta/nsInfo.rds
