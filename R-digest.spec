@@ -4,7 +4,7 @@
 #
 Name     : R-digest
 Version  : 0.6.12
-Release  : 40
+Release  : 41
 URL      : http://cran.r-project.org/src/contrib/digest_0.6.12.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/digest_0.6.12.tar.gz
 Summary  : Create Compact Hash Digests of R Objects
@@ -39,11 +39,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1502398901
+export SOURCE_DATE_EPOCH=1502403099
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1502398901
+export SOURCE_DATE_EPOCH=1502403099
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
