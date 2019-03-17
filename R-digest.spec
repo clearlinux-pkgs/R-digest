@@ -4,24 +4,19 @@
 #
 Name     : R-digest
 Version  : 0.6.18
-Release  : 67
+Release  : 68
 URL      : https://cran.r-project.org/src/contrib/digest_0.6.18.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/digest_0.6.18.tar.gz
 Summary  : Create Compact Hash Digests of R Objects
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-digest-lib
+Requires: R-digest-lib = %{version}-%{release}
 BuildRequires : R-knitr
 BuildRequires : R-markdown
 BuildRequires : buildreq-R
 
 %description
-of hash digests of arbitrary R objects (using the 'md5', 'sha-1', 'sha-256', 
- 'crc32', 'xxhash' and 'murmurhash' algorithms) permitting easy comparison of R
- language objects, as well as a function 'hmac()' to create hash-based
- message authentication code. Please note that this package is not meant to
- be deployed for cryptographic purposes for which more comprehensive (and
- widely tested) libraries such as 'OpenSSL' should be used.
+## digest [![Build Status](https://travis-ci.org/eddelbuettel/digest.svg)](https://travis-ci.org/eddelbuettel/digest) [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/digest)](https://cran.r-project.org/package=digest) [![Downloads](http://cranlogs.r-pkg.org/badges/digest?color=brightgreen)](http://www.r-pkg.org/pkg/digest) [![Code Coverage](https://img.shields.io/codecov/c/github/eddelbuettel/digest/master.svg)](https://codecov.io/gh/eddelbuettel/digest)
 
 %package lib
 Summary: lib components for the R-digest package.
@@ -39,11 +34,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1539201842
+export SOURCE_DATE_EPOCH=1552805815
 
 %install
+export SOURCE_DATE_EPOCH=1552805815
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1539201842
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -78,8 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library digest|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  digest || :
 
 
 %files
@@ -110,7 +104,17 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/digest/html/00Index.html
 /usr/lib64/R/library/digest/html/R.css
 /usr/lib64/R/library/digest/include/pmurhashAPI.h
-/usr/lib64/R/library/digest/libs/symbols.rds
+/usr/lib64/R/library/digest/tests/AESTest.R
+/usr/lib64/R/library/digest/tests/AESTest.Rout.save
+/usr/lib64/R/library/digest/tests/crc32.R
+/usr/lib64/R/library/digest/tests/digestTest.R
+/usr/lib64/R/library/digest/tests/digestTest.Rout.save
+/usr/lib64/R/library/digest/tests/hmacTest.R
+/usr/lib64/R/library/digest/tests/hmacTest.Rout.save
+/usr/lib64/R/library/digest/tests/load-unload.R
+/usr/lib64/R/library/digest/tests/num2hexTest.R
+/usr/lib64/R/library/digest/tests/raw.R
+/usr/lib64/R/library/digest/tests/sha1Test.R
 
 %files lib
 %defattr(-,root,root,-)
