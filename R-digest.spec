@@ -4,7 +4,7 @@
 #
 Name     : R-digest
 Version  : 0.6.18
-Release  : 72
+Release  : 73
 URL      : https://cran.r-project.org/src/contrib/digest_0.6.18.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/digest_0.6.18.tar.gz
 Summary  : Create Compact Hash Digests of R Objects
@@ -34,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552805815
+export SOURCE_DATE_EPOCH=1556471398
 
 %install
-export SOURCE_DATE_EPOCH=1552805815
+export SOURCE_DATE_EPOCH=1556471398
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -73,7 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  digest || :
+R CMD check --no-manual --no-examples --no-codoc digest || :
 
 
 %files
@@ -120,4 +120,3 @@ R CMD check --no-manual --no-examples --no-codoc  digest || :
 %defattr(-,root,root,-)
 /usr/lib64/R/library/digest/libs/digest.so
 /usr/lib64/R/library/digest/libs/digest.so.avx2
-/usr/lib64/R/library/digest/libs/digest.so.avx512
