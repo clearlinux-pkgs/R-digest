@@ -1,2 +1,12 @@
 # This file contains recursive sources that require this package
+R-SGP
+R-future
+R-ggplot2
+R-plotly
+R-rcmdcheck
+R-rhub
+R-rngtools
+R-shiny
+R-testthat
+R-vctrs
 apache-spark
