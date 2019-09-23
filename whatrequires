@@ -1,12 +1,18 @@
 # This file contains recursive sources that require this package
+R-BatchJobs
+R-NMF
 R-SGP
+R-devtools
 R-future
 R-ggplot2
+R-pkgdown
+R-pkgmaker
 R-plotly
 R-rcmdcheck
 R-rhub
 R-rngtools
 R-shiny
+R-shinyjs
 R-testthat
 R-vctrs
 apache-spark
