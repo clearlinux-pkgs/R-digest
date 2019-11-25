@@ -22,6 +22,7 @@ R-rngtools
 R-roxygen2
 R-shiny
 R-shinyjs
+R-tesseract
 R-testthat
 R-vctrs
 apache-spark
