@@ -4,7 +4,7 @@
 #
 Name     : R-digest
 Version  : 0.6.23
-Release  : 82
+Release  : 83
 URL      : https://cran.r-project.org/src/contrib/digest_0.6.23.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/digest_0.6.23.tar.gz
 Summary  : A function for creating hash digests of R objects.
