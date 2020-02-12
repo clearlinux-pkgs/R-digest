@@ -1,6 +1,8 @@
 # This file contains recursive sources that require this package
 R-BatchJobs
+R-IRkernel
 R-NMF
+R-R.cache
 R-SGP
 R-covr
 R-devtools
@@ -20,6 +22,7 @@ R-rcmdcheck
 R-rhub
 R-rngtools
 R-roxygen2
+R-rsconnect
 R-shiny
 R-shinyjs
 R-tesseract
