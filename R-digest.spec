@@ -4,28 +4,23 @@
 #
 Name     : R-digest
 Version  : 0.6.25
-Release  : 86
+Release  : 87
 URL      : https://cran.r-project.org/src/contrib/digest_0.6.25.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/digest_0.6.25.tar.gz
 Summary  : Create Compact Hash Digests of R Objects
 Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-digest-lib = %{version}-%{release}
-BuildRequires : R-knitr
-BuildRequires : R-markdown
 BuildRequires : buildreq-R
 
 %description
-## digest: Compact hash representations of arbitrary R objects
-[![Build Status](https://travis-ci.org/eddelbuettel/digest.svg)](https://travis-ci.org/eddelbuettel/digest)
-[![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html)
-[![CRAN](http://www.r-pkg.org/badges/version/digest)](https://cran.r-project.org/package=digest)
-[![Dependencies](https://tinyverse.netlify.com/badge/digest)](https://cran.r-project.org/package=digest)
-[![Downloads](http://cranlogs.r-pkg.org/badges/digest?color=brightgreen)](http://www.r-pkg.org/pkg/digest)
-[![CRAN use](https://jangorecki.gitlab.io/rdeps/digest/CRAN_usage.svg?sanitize=true)](https://cran.r-project.org/package=digest)
-[![CRAN indirect](https://jangorecki.gitlab.io/rdeps/digest/indirect_usage.svg?sanitize=true)](https://cran.r-project.org/package=digest)
-[![BioConductor use](https://jangorecki.gitlab.io/rdeps/digest/BioC_usage.svg?sanitize=true)](https://cran.r-project.org/package=digest)
-[![Code Coverage](https://img.shields.io/codecov/c/github/eddelbuettel/digest/master.svg)](https://codecov.io/gh/eddelbuettel/digest)
+of hash digests of arbitrary R objects (using the 'md5', 'sha-1', 'sha-256', 
+ 'crc32', 'xxhash', 'murmurhash' and 'spookyhash' algorithms) permitting easy
+ comparison of R language objects, as well as functions such as'hmac()' to
+ create hash-based message authentication code. Please note that this package
+ is not meant to be deployed for cryptographic purposes for which more
+ comprehensive (and widely tested) libraries such as 'OpenSSL' should be
+ used.
 
 %package lib
 Summary: lib components for the R-digest package.
@@ -37,21 +32,22 @@ lib components for the R-digest package.
 
 %prep
 %setup -q -c -n digest
+cd %{_builddir}/digest
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582563418
+export SOURCE_DATE_EPOCH=1589407311
 
 %install
-export SOURCE_DATE_EPOCH=1582563418
+export SOURCE_DATE_EPOCH=1589407311
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -132,3 +128,4 @@ R CMD check --no-manual --no-examples --no-codoc digest || :
 %defattr(-,root,root,-)
 /usr/lib64/R/library/digest/libs/digest.so
 /usr/lib64/R/library/digest/libs/digest.so.avx2
+/usr/lib64/R/library/digest/libs/digest.so.avx512
