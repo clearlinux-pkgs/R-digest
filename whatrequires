@@ -5,7 +5,6 @@ R-NMF
 R-R.cache
 R-SGP
 R-covr
-R-devtools
 R-downloader
 R-future
 R-geiger
@@ -20,11 +19,11 @@ R-pkgmaker
 R-plotly
 R-rcmdcheck
 R-rhub
+R-rms
 R-rngtools
 R-roxygen2
 R-rsconnect
 R-shiny
 R-shinyjs
-R-tesseract
 R-testthat
 R-vctrs
