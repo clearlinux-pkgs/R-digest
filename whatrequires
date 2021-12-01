@@ -4,6 +4,7 @@ R-IRkernel
 R-NMF
 R-R.cache
 R-SGP
+R-batchtools
 R-covr
 R-distributional
 R-downlit
@@ -28,6 +29,5 @@ R-rms
 R-rngtools
 R-roxygen2
 R-rsconnect
-R-shiny
 R-shinyjs
 R-testthat
