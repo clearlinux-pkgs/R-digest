@@ -18,6 +18,7 @@ R-kableExtra
 R-lintr
 R-miscTools
 R-pander
+R-phangorn
 R-pkgdown
 R-pkgmaker
 R-plotly
