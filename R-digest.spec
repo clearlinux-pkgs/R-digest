@@ -4,7 +4,7 @@
 #
 Name     : R-digest
 Version  : 0.6.30
-Release  : 110
+Release  : 111
 URL      : https://cran.r-project.org/src/contrib/digest_0.6.30.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/digest_0.6.30.tar.gz
 Summary  : Create Compact Hash Digests of R Objects
