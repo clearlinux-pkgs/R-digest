@@ -4,11 +4,13 @@ R-IRkernel
 R-NMF
 R-R.cache
 R-SGP
+R-ape
 R-batchtools
 R-covr
 R-distributional
 R-downlit
 R-downloader
+R-filehash
 R-future
 R-geiger
 R-htmltools
@@ -27,7 +29,6 @@ R-reactable
 R-rhub
 R-rms
 R-rngtools
-R-roxygen2
 R-rsconnect
 R-shinyjs
 R-testthat
