@@ -1,5 +1,5 @@
 PKG_NAME := R-digest
-URL = https://cran.r-project.org/src/contrib/digest_0.6.32.tar.gz
+URL = https://cran.r-project.org/src/contrib/digest_0.6.33.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common

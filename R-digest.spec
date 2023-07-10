@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-digest
-Version  : 0.6.32
-Release  : 116
-URL      : https://cran.r-project.org/src/contrib/digest_0.6.32.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/digest_0.6.32.tar.gz
+Version  : 0.6.33
+Release  : 117
+URL      : https://cran.r-project.org/src/contrib/digest_0.6.33.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/digest_0.6.33.tar.gz
 Summary  : Create Compact Hash Digests of R Objects
 Group    : Development/Tools
 License  : GPL-2.0+
@@ -19,8 +19,8 @@ BuildRequires : buildreq-R
 
 %description
 digests of arbitrary R objects (using the 'md5', 'sha-1', 'sha-256', 'crc32',
- 'xxhash', 'murmurhash', 'spookyhash' and 'blake3' algorithms) permitting easy
- comparison of R language objects, as well as functions such as'hmac()' to
+ 'xxhash', 'murmurhash', 'spookyhash', 'blake3' and 'crc32c' algorithms) permitting
+ easy comparison of R language objects, as well as functions such as'hmac()' to
  create hash-based message authentication code. Please note that this package
  is not meant to be deployed for cryptographic purposes for which more
  comprehensive (and widely tested) libraries such as 'OpenSSL' should be
@@ -45,10 +45,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1687798853
+export SOURCE_DATE_EPOCH=1689007682
 
 %install
-export SOURCE_DATE_EPOCH=1687798853
+export SOURCE_DATE_EPOCH=1689007682
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
